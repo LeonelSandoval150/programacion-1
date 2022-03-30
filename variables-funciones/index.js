@@ -20,12 +20,32 @@ function mostrar_en_consola(){
 
 // condicionales
 function validar () {
-    const calificacion = prompt('ingrese su nota :')
+    const calificacion = prompt('ingrese su nota :');
+    //condicion - forma 1
 
+    /*
     if(calificacion>=7){
         alert('estas aprobado')
     }else{
         alert('nos vemos en diciembre bro')
     }
+    */
+   // expresion ternario
+   (calificacion >= 7) ? alert("estas aprobado") : alert("desabrobado");
+}
+
+// funcion con retorno y comunicacion entre funciones
+function calcular (){
+
+    const Number= prompt('ingrese un numero');
+    const  resultado = Number * 10 
+    // estamos entreganddo una repuesta 
+    return resultado    
+} 
+
+function visualizar (){
+    // invocamos (ejutamos) la funcion calcular
+    const respuesta = calcular ()
+    alert(respuesta)
 
 }
