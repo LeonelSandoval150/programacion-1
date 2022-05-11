@@ -1,5 +1,6 @@
 function calcular(dato1,dato2)
 {
+     // se raliza la operacion 
   
     const potencia_1 = (dato1*dato1)
     const potencia_2 = (dato2 *dato2)
@@ -23,5 +24,6 @@ function mostrar()
 const respuesta= calcular(dato1,dato2)
 
 document.getElementById("h_resultado").textContent='la Hipotenusa:'+respuesta
+// se guarda h1 gracias textContent
 
 }

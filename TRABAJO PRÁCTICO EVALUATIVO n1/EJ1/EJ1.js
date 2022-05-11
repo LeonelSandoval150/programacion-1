@@ -1,41 +1,36 @@
-       let =Ford_Ka
-       let =Ford_Fiesta
-       let= Ford_Focus
+function descuento ()
+{ // el contenido del select del html se guarda en una constante
+    const automovil = document.getElementById ("auto_1").value
+     // se realiza el contenido en base a lo que se guardo en la constante automovil 
+    if (automovil == 0){
+        // se raliza la operacion de descuento 
+        const fordka =(1750000 * 15) / 100
+        const precio = 1750000 - fordka ;
+        // se raliza el descuento y se muestra 
+        document.getElementById("h_resultado").textContent = "El precio con descuento es :"+precio+"$";
+           // se guarda el precio con el descuento en el h1 gracias textContent
 
-       let precio1 = 1.75000
-       let precio2 = 1.950000
-       let precio3 = 2.560000
-       let total
-       let desc
-       let numero
+        
+    }
 
+    else if (automovil == 1) {
+         // se raliza la operacion de descuento 
+        const fordfiesta =(1950000 * 5)  /100
+        const precio = 1950000- fordfiesta ;
 
-function autos(dato)
-{
-       const dato= document.getElementById("sh_operacion").value
-       if (dato==0) {
-              const resultado= ('Temperaturabaja')
-              return resultado   
-       }else{
-              if (dato==1) {
-                  const resultado= ('Temperatura adecuada')
-                  return resultado     
-              }
-              else {
-                  if (dato==2) {
-                      const resultado =('Temperatura alta')
-                      return resultado 
-                  }
-              }
+        document.getElementById("h_resultado").textContent = "El precio con descuento es : "+precio+"$";
+           // se guarda el precio con el descuento en el h1 gracias textContent
 
- //forma1
+        
+    }
+    else{
+         // se raliza la operacion de descuento 
+        const FordFocus =(2560000 * 10) / 100
+        const precio =  2560000 - FordFocus;
 
-   
- //aca ejecutamos e invocamos a la funcion 
-const respuesta= calcular(dato1,dato2)
-   
-document.getElementById("h_resultado").textContent='la Hipotenusa:'+respuesta
-   
+        document.getElementById("h_resultado").textContent = "El precio con descuento es :"+precio+"$";
+        // se guarda el precio con el descuento en el h1 gracias textContent
+
+    }
+
 }
-
-     

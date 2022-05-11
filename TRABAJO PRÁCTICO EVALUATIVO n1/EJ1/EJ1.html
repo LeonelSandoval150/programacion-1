@@ -7,21 +7,27 @@
     <title>Concesionaria de Autos</title>
 </head>
 <body>
-     <select id="sh_operacion"> operacion 
 
+    <h1>Elija el auto del que quiere saber el descuento</h1>
+
+    <select id="auto_1" >
         <option value="0" >Ford Ka</option>
         <option value="1" >Ford Fiesta</option>
         <option value="2" >Ford Focus</option>
     </select>
-
-
-    <br>
-    <br>
-
-    <button onclick="mostrar()">mostrar precio</button>
    
 
-    <h1 id="h_resultado"></h1>
+        <h1>los precio de los autos</h1>
+         <h2> • Ford Ka: $1.750.00 </h2> 
+         <h2> • Ford Fiesta: $1.950.000 </h2>
+         <h2> • Ford Focus: $2.560.000</h2>
+
+    <br>
+    <br>
+
+    <button onclick="descuento()">mostrar el precio con descuento </button>
+   
+        <h1 id="h_resultado"></h1>
 
     
 <Script src="EJ1.js"></Script>
