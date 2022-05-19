@@ -16,14 +16,14 @@ function calcular(dato1,dato2)
 function mostrar()
 {
     //forma1
-   const dato1= document.querySelector("#inp_dato1").value
+  const dato1= document.querySelector("#inp_dato1").value
    // forma2
   const dato2= document.getElementById("inp_dato2").value
 
   //aca ejecutamos e invocamos a la funcion 
-const respuesta= calcular(dato1,dato2)
+  const respuesta= calcular(dato1,dato2)
 
-document.getElementById("h_resultado").textContent='la Hipotenusa:'+respuesta
-// se guarda h1 gracias textContent
+  document.getElementById("h_resultado").textContent='la Hipotenusa:'+respuesta
+  // se guarda h1 gracias textContent
 
 }

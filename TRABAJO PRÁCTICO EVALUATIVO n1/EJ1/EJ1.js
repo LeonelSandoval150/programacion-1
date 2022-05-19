@@ -1,12 +1,14 @@
 function descuento ()
 { // el contenido del select del html se guarda en una constante
     const automovil = document.getElementById ("auto_1").value
-     // se realiza el contenido en base a lo que se guardo en la constante automovil 
+     // se analiza el contenido en base a lo que se guardo en la constante automovil 
     if (automovil == 0){
         // se raliza la operacion de descuento 
         const fordka =(1750000 * 15) / 100
         const precio = 1750000 - fordka ;
         // se raliza el descuento y se muestra 
+
+        
         document.getElementById("h_resultado").textContent = "El precio con descuento es :"+precio+"$";
            // se guarda el precio con el descuento en el h1 gracias textContent
 
