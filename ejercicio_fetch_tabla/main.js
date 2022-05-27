@@ -11,7 +11,7 @@ const obtenr_usuarios = async () => {
    
        let fila=
        `<tr>
-       <td>${element.image}</td>
+       <td><img src="${element.image}" class="img-fluid" style="width:2rem"></td>
        <td>${element.name}</td>
        <td>${element.symbol}</td>
        <td>${element.current_price}</td>
