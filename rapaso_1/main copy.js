@@ -19,8 +19,9 @@ consolas.unshift("Nintendo Will")
 console.log('el arreglo queda asi :'+ consolas)
 
 const mostrar = () => {
- 
     
+ 
+
 
 }
 
