@@ -41,6 +41,9 @@ export default class Producto {
     }
 
     obtener_productos (){
+//recolectamos todos los productos alojados en el Item "productos"que estan alojados
+      
+let lista_productos=JSON.parse(localStorage.getItem("productos")) 
 
     }
     
