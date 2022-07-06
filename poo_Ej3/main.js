@@ -1,21 +1,32 @@
-import Producto from "./producto.js";
-//const producto = new Producto()
-
-function guardar ()
-{
-    let descripcion = document.getElementById ("inp_descripcion").value
-    let precio_Venta = document.getElementById ("inp_precio_venta").value
-    let categoria = document.getElementById ("slt_cat").value
-    let producto = new Producto(descripcion,precio_Venta,categoria)
-    // invocamos (ejecutamos) el metodo guardar_preducto(),
+import Producto from "./producto.js"
+    
+function guardar(){
+    let descripcion = document.getElementById("desc").value
+    let precio_venta = document.getElementById("precio").value
+    let select = document.getElementById("select").value
+    let producto = new Producto(descripcion,precio_venta,select)
+    /*Invocamos(ejecutamos) al metodo guardar_producto(),
+    perteneciente a la clase producto*/
     producto.guardar_producto()
 }
+document.getElementById("boton").addEventListener("click",guardar)
 
-document.getElementById ("btn_guardar").addEventListener("click",guardar)
-
-function listar (){
-    let producto= new Producto()
-    producto.obtener_productos()
-
+function listar() {
+    let producto=new Producto()
+    producto.obtener_producto()
 }
 listar()
+
+function eliminar ()
+{
+    let indice = localStorage.getItem("indice")
+        // creamos una instancia 
+    // pera acceder a los metodes y atributos de la clase Producto
+    let producto = new Producto ()
+    
+    // haciendo uso de la instancia
+    // invocamos el metodo eliminar_producto()
+    producto.eliminar_producto(indice)
+}
+
+document.getElementById ("btn_eliminar").addEventListener("click",eliminar)

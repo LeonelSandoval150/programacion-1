@@ -4,52 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="bootstrap.min (100).css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+
+    <title>Document</title>
 </head>
 <body>
-    <nav class="navbar bg-dark">
+      <nav class="navbar bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand">Navbar</a>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+          <a class="navbar-brand" href="#">Navbar</a>
         </div>
-    </nav>
-    <br>
-    <div class="container">
+      </nav>
+      <div class="container">
         <div class="row">
-            <div class="col-lg-4">
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Descripción:</span>
-                    <input id="inp_descripcion" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Precio de venta:</span>
-                    <input id="inp_precio_venta" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <select class="form-select mb-3" aria-label="Default select example" id="slt_cat">
-                    <option selected>Categoria:</option>
-                    <option value="1">Heladera</option>
-                    <option value="2">TV</option>
-                </select>
-                <button id="btn_guardar" type="modulo" class="btn btn-outline-info" >Guardar</button>
+          <div class="col-lg-4">
+            <div class="mb-3">
+              <label class="form-label" for="">Descripcion</label>
+              <input class="form-control" id="desc" type="text">
             </div>
-            <div class="col-lg-8">
-                <table>
-                    <thead>
-
-                    </thead>
-                    
-                    <tbody>
-
-                    </tbody>
-
-                </table>
+            <div class="mb-3">
+              <label class="form-label" for="">Precio de venta</label>
+              <input class="form-control" id="precio" type="number">
             </div>
+            <div class="mb-3">
+              <label class="form-label" for="">Categorias</label>
+              <select class="form-select" name="select" id="select">  
+                <option value="cocina">cocina</option>
+                <option value="Heladera">Heladera</option>
+                <option value="TV">TV</option>
+                <option value="Goooooooooooood">Goku</option>
+              </select>
+            </div>
+            <button class="btn btn-dark" id="boton" type="submit">Guardar</button>
+          </div>
+          <div class="col-lg-8">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>number</th>
+                  <th>Descripcion</th>
+                  <th>Precio de venta</th>
+                  <th>Categoria</th>
+                  <th>acciones</th>
+                </tr>
+              </thead>
+              <tbody id="tbody">
+
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
+      
+<div id="mymodal" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Eliminacion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>¿Seguro que queres borrar este producto?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <button id="btn_eliminar" type="button" class="btn btn-primary">si</button>
+      </div>
     </div>
+  </div>
+</div>
+
     <script src="main.js" type="module"></script>
+    <script src="auxiliar.js"></script>
+
 </body>
 </html>
