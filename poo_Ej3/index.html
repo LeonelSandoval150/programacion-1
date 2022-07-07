@@ -21,7 +21,7 @@
           <div class="col-lg-4">
             <div class="mb-3">
               <label class="form-label" for="">Descripcion</label>
-              <input class="form-control" id="desc" type="text">
+              <input class="form-control" id="inp_descripcion" type="text">
             </div>
             <div class="mb-3">
               <label class="form-label" for="">Precio de venta</label>
@@ -30,13 +30,14 @@
             <div class="mb-3">
               <label class="form-label" for="">Categorias</label>
               <select class="form-select" name="select" id="select">  
-                <option value="cocina">cocina</option>
-                <option value="Heladera">Heladera</option>
-                <option value="TV">TV</option>
-                <option value="Goooooooooooood">Goku</option>
+                <option value="0">cocina</option>
+                <option value="1">Heladera</option>
+                <option value="2">TV</option>
+                <option value="3">Goooooooooooood</option>
               </select>
             </div>
             <button class="btn btn-dark" id="boton" type="submit">Guardar</button>
+            <button style="display: none;" id="btn_actualizar" class="btn btn-primary">Actualizar</button>
           </div>
           <div class="col-lg-8">
             <table class="table">

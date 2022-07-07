@@ -2,9 +2,9 @@ const framework = {
     titulo: 'Framework utilizado en la actualidad',
     nombre: 'Angular',
     características: {
-   lenguaje: 'TypeScript',
-   patron: 'MVVM',
-   spa: 'si'
+        lenguaje: 'TypeScript',
+        patron: 'MVVM',
+        spa: 'si'
     }
    }
    //cree la const framework para 
@@ -12,9 +12,10 @@ const framework = {
 
 const mostrar_en_consola = () => {
     const {lenguaje, patron, spa} = framework.características
+    const { titulo,nombre } =  framework
     console.log(`
-        Titulo: ${framework.titulo}
-        Nombre: ${framework.nombre}
+        Titulo: ${titulo}
+        Nombre: ${nombre}
 
         Caracteristicas:
         Lenguaje: ${lenguaje}

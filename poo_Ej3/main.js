@@ -1,7 +1,7 @@
 import Producto from "./producto.js"
     
 function guardar(){
-    let descripcion = document.getElementById("desc").value
+    let descripcion = document.getElementById("inp_descripcion").value
     let precio_venta = document.getElementById("precio").value
     let select = document.getElementById("select").value
     let producto = new Producto(descripcion,precio_venta,select)
@@ -30,3 +30,15 @@ function eliminar ()
 }
 
 document.getElementById ("btn_eliminar").addEventListener("click",eliminar)
+
+
+function actualizar (){
+//creamos la instancia producto
+    let producto = new Producto()
+    /*
+    
+    */
+    producto.actualizar_producto ()
+
+}
+document.getElementById("btn_actualizar").addEventListener("click",actualizar)
