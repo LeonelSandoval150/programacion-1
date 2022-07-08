@@ -1,0 +1,55 @@
+/*
+    <nav class="navbar bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+        </div>
+      </nav>
+*/
+
+
+import Producto from "./producto.js"
+    
+function guardar(){
+    let tipo111= document.getElementById("tipo").value
+    let image= document.getElementById("URL_img").value
+    let descripcion = document.getElementById("inp_descripcion").value
+    let precio_venta = document.getElementById("precio").value
+    let select = document.getElementById("select").value
+    let producto = new Producto(image,descripcion,tipo111,precio_venta,select)
+    /*Invocamos(ejecutamos) al metodo guardar_producto(),
+    perteneciente a la clase producto*/
+    producto.guardar_producto()
+}
+document.getElementById("boton").addEventListener("click",guardar)
+
+function listar() {
+    let producto=new Producto()
+    producto.obtener_producto()
+}
+listar()
+
+function eliminar ()
+{
+    let indice = localStorage.getItem("indice")
+        // creamos una instancia 
+    // pera acceder a los metodes y atributos de la clase Producto
+    let producto = new Producto ()
+    
+    // haciendo uso de la instancia
+    // invocamos el metodo eliminar_producto()
+    producto.eliminar_producto(indice)
+}
+
+document.getElementById ("btn_eliminar").addEventListener("click",eliminar)
+
+
+function actualizar (){
+//creamos la instancia producto
+    let producto = new Producto()
+    /*
+    
+    */
+    producto.actualizar_producto ()
+
+}
+document.getElementById("btn_actualizar").addEventListener("click",actualizar)

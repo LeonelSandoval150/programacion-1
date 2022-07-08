@@ -8,14 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="bootstrap.bundle.min.js"></script>
 
-    <title>Document</title>
+    <title>Mercado de jugadores</title>
 </head>
 <body>
-      <nav class="navbar bg-primary">
+
+  <style type="text/css">
+    body{
+      background: url(https://a-static.besthdwallpaper.com/kylian-mbappe-fifa-22-videojuego-papel-pintado-3840x2160-76610_54.jpg );
+      background-size: 1500px 1000px;
+    }
+  </style>
+  
+  
+  
+    <nav class="navbar navbar-expand-lg" style="background-color:#0d00ca ">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-        </div>
-      </nav>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Easports_fifa_logo.svg/640px-Easports_fifa_logo.svg.png" width="100" height="50">
+    </nav>
+    
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
@@ -24,17 +34,38 @@
               <label class="form-label" for="">Descripcion</label>
               <input class="form-control" id="inp_descripcion" type="text">
             </div>
-            <div class="mb-3">
+
+
+            <div class="input-group mb-3">
               <label class="form-label" for="">Precio de venta</label>
+              <span class="input-group-text">
+                <select id="tipo">
+                  <option value="$">ARS</option>
+                  <option value="US$">Dólar</option>
+                  <option value="€">Euro</option>
+                  <option value="¥">Yen japonés</option>
+                </select>
+              </span>
               <input class="form-control" id="precio" type="number">
             </div>
+
+
+
+            <div class="mb-3">
+              <label class="form-label" for="">URL img</label>
+              <input class="form-control" id="URL_img" type="text">
+            </div>
+
+
             <div class="mb-3">
               <label class="form-label" for="">Categorias</label>
               <select class="form-select" name="select" id="select">  
-                <option value="0">cocina</option>
-                <option value="1">Heladera</option>
-                <option value="2">TV</option>
-                <option value="3">Goooooooooooood</option>
+                <option value="0">Remera</option>
+                <option value="1">Pantalon</option>
+                <option value="2">Camperon</option>
+                <option value="3">zapatilla </option>
+                <option value="4">botines</option>
+                <option value="5">buzos</option>
               </select>
             </div>
           </form>
@@ -45,6 +76,7 @@
             <table class="table">
               <thead>
                 <tr>
+                  <th>Img</th>
                   <th>number</th>
                   <th>Descripcion</th>
                   <th>Precio de venta</th>
@@ -83,3 +115,6 @@
 
 </body>
 </html>
+
+
+

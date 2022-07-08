@@ -1,13 +1,17 @@
 export default class Producto{
-    constructor(d,p,s){
+    constructor(m,d,t,p,s){
+        this.image =m
         this.descripcion = d
+        this.tipo=t
         this.precio_venta = p
         this.select = s
     }
     //metodo
     guardar_producto(){
         let nuevo_producto = {
+            image: this.image,
             descripcion: this.descripcion,
+            tipo111:this.tipo,
             precio_venta: this.precio_venta,
             select: this.select    
         }
@@ -42,6 +46,8 @@ export default class Producto{
             let fila = `
             <tr>
                 <td>${index+1}</td>
+                <td><img src="${element.image}" class="img-fluid" style="width:2rem"></td>
+                <td>${element.tipo111}</td>
                 <td>${element.descripcion}</td>
                 <td>${element.precio_venta}</td>
                 <td>${element.select}</td>
@@ -78,6 +84,8 @@ export default class Producto{
         let indice = localStorage.getItem("indice")
 
         let lista_productos= JSON.parse(localStorage.getItem("Productos"))
+        lista_productos[indice].tipo111= document.getElementById("tipo").value
+        lista_productos[indice].image= document.getElementById("URL_img").value
 
         lista_productos[indice].descripcion= document.getElementById("inp_descripcion").value
         lista_productos[indice].precio_venta= document.getElementById("precio").value
@@ -101,4 +109,3 @@ export default class Producto{
 
     }
 }
-
