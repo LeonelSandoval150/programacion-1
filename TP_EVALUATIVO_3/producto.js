@@ -48,8 +48,8 @@ export default class Producto{
                 <td>${index+1}</td>
                 <td><img src="${element.image}" class="img-fluid" style="width:2rem"></td>
                 <td>${element.tipo111}</td>
-                <td>${element.descripcion}</td>
                 <td>${element.precio_venta}</td>
+                <td>${element.descripcion}</td>
                 <td>${element.select}</td>
                 <td>
                     <button onclick="almacenar_indice(${index})" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#mymodal">
@@ -86,7 +86,6 @@ export default class Producto{
         let lista_productos= JSON.parse(localStorage.getItem("Productos"))
         lista_productos[indice].tipo111= document.getElementById("tipo").value
         lista_productos[indice].image= document.getElementById("URL_img").value
-
         lista_productos[indice].descripcion= document.getElementById("inp_descripcion").value
         lista_productos[indice].precio_venta= document.getElementById("precio").value
         lista_productos[indice].select= document.getElementById("select").value
@@ -108,4 +107,42 @@ export default class Producto{
         document.getElementById("form_producto").reset() 
 
     }
+
+
+    hacer_catalogo()
+    {
+        let lista_productos = JSON.parse(localStorage.getItem("Productos"))
+
+        let filas = []
+        lista_productos.forEach((element,index) => {
+            let fila = `
+            
+            <div class="col-lg-3">
+            <div   style="background-color: black; color:white" class="card mb-10">
+                <img height="250" src="${element.image}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4  class="card-title">${element.select}</h4>
+                    <p  class="card-text">${element.descripcion}</p>
+                    <p  class="card-text"> ${element.tipo111} ${element.precio_venta}</p>
+                    <a href="#" class="btn btn-primary">comprar</a>
+                </div>
+            </div>
+        </div>
+            
+            `
+            filas.push(fila)
+            
+        });
+        document.getElementById("div_1").innerHTML = filas.join('')
+       
+    }
+       
 }
+
+
+
+
+
+
+
+

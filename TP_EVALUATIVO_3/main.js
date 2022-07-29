@@ -1,19 +1,10 @@
-/*
-    <nav class="navbar bg-primary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-        </div>
-      </nav>
-*/
-
-
 import Producto from "./producto.js"
     
 function guardar(){
     let tipo111= document.getElementById("tipo").value
     let image= document.getElementById("URL_img").value
-    let descripcion = document.getElementById("inp_descripcion").value
     let precio_venta = document.getElementById("precio").value
+    let descripcion = document.getElementById("inp_descripcion").value
     let select = document.getElementById("select").value
     let producto = new Producto(image,descripcion,tipo111,precio_venta,select)
     /*Invocamos(ejecutamos) al metodo guardar_producto(),
