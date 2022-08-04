@@ -119,12 +119,12 @@ export default class Producto{
             
             <div class="col-lg-3">
             <div   style="background-color: black; color:white" class="card mb-10">
-                <img height="250" src="${element.image}" class="card-img-top" alt="...">
+                <img height="200" src="${element.image}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h4  class="card-title">${element.select}</h4>
-                    <p  class="card-text">${element.descripcion}</p>
+                    <h4  style="margin-bottom:5px"  class="card-title">${element.select}</h4>
+                    <p style="margin-bottom:5px" class="card-text">${element.descripcion}</p>
                     <p  class="card-text"> ${element.tipo111} ${element.precio_venta}</p>
-                    <a href="#" class="btn btn-primary">comprar</a>
+                    <button class="btn btn-primary" onclick="agregar_pedido('${element.descripcion}','${element.precio_venta}')">Comprar</button>
                 </div>
             </div>
         </div>

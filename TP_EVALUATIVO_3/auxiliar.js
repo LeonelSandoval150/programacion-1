@@ -28,3 +28,49 @@ function almacenar_indice(indice){
       
     
     }
+
+    function agregar_pedido(d,p)
+{
+    let nuevo_pedido = {
+        descripcion:d,
+        cantidad:1,
+        precio:p
+    }
+
+    if("pedidos" in localStorage){
+        let lista = JSON.parse(localStorage.getItem("pedidos"))
+        lista.push(nuevo_pedido)
+        localStorage.setItem("pedidos",JSON.stringify(lista))
+    }else{
+        let lista = [] 
+        lista.push(nuevo_pedido)
+        localStorage.setItem("pedidos",JSON.stringify(lista))
+    }
+
+    cargar_pedido()
+
+}
+
+function cargar_pedido(){
+    let lista_productos  = JSON.parse(localStorage.getItem("pedidos"))
+    let filas = []
+    
+    lista_productos .forEach(element => {
+        let fila = `
+            <tr style="background-color: black; color:white">
+                <td>${element.descripcion}</td>
+                <td>
+                    ${element.cantidad}
+                    <button class="btn btn-light btn-sm"><i class="fa fa-plus-square-o"></i></button>
+                    <button class="btn btn-light btn-sm"><i class="fa fa-minus-square-o"></i></button>
+                </td>
+                <td>\$${element.precio}</td>
+            </tr>
+
+        `
+        filas.push(fila)
+    });
+    document.getElementById("tbody_1").innerHTML = filas.join('')
+    
+}
+cargar_pedido()

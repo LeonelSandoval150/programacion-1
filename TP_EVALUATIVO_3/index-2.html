@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>catalogo de productos</title>
-    <Link rel="stylesheet" href="bootstrap.min.css"></Link>
+    <Link rel="stylesheet" href="bootstrap.min (100).css"></Link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="bootstrap.bundle.min.js"></script>
 </head>
@@ -17,22 +17,42 @@
       background-size: 1600px 800px;
     }
   </style>
-
-        <div class="container mt-2">
+        <div class="container mt-3  class="row">
     
             <div id="row" class="row">
+              <div class="col-lg-8">
+                <h1>productos</h1>
                 <div class="row"  id="div_1">
-
                 </div>
+
+              </div>
+                
+              <div class="col-lg-4">
+                <h1>Pedidos</h1>
+                <table class="table table-hover" >
+                <thead>
+                  <tr class="table-primary">
+                    <th>producto</th>
+                    <th>cantidad</th>
+                    <th>precio:</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody_1">
+                </tbody>
+  
+              </table>
+              <a href="index.html"><button  style="background-color: rgb(82, 34, 196); color:white">ver tienda</button></a>
             </div>
-    
+
+            </div>
+
+            <a name ="index-2"></a>
         </div>
-
-
-
-
+       
 
     <script src="main-2.js" type="module"></script>
+    <script src="auxiliar.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
     
 </body>
 </html>
